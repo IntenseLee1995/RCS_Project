@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="RCS_Project.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <hr style="color:transparent;border-top: 0px;" />
-    <img style="width:100%;height:auto;" src="http://rcs.gearhostpreview.com/Images/Login-Banner.jpg" alt="Login" />
+    <img style="width:100%;height:auto;" src="http://rcs.gearhostpreview.com/Images/Login-Banner.jpg" alt="Login Image Banner" />
     <div class="row">
         <div class="col-md-12">
             <br /><label for="email"><b>Email&nbsp;</b></label><input type="text" placeholder="Enter Email" name="email" required><br />
