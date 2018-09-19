@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style3.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Feedback.aspx" />
@@ -151,6 +152,7 @@
     <Content Include="Images\System-Mission.jpg" />
     <Content Include="Images\System-Team.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="S-Dashboard.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -214,6 +216,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S-Dashboard.aspx.cs">
+      <DependentUpon>S-Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="S-Dashboard.aspx.designer.cs">
+      <DependentUpon>S-Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sign-Up.aspx.cs">
       <DependentUpon>Sign-Up.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
