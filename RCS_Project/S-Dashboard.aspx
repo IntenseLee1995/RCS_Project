@@ -31,9 +31,10 @@
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="#">Home 1</a></li>
-                            <li><a href="#">Home 2</a></li>
-                            <li><a href="#">Home 3</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="#">Profile Settings</a></li>
+                            <li><a href="#">History</a></li>
                         </ul>
                     </li>
                     <li>
@@ -46,7 +47,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a href="#">PLACEHOLDER</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
@@ -60,7 +61,7 @@
             </nav>
 
             <!-- Page Content Holder -->
-            <div id="content">
+            <div class="col-lg-3 col-md-3 col-sm-1-6 col-xs-12" id="content">
 
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -87,12 +88,12 @@
                 <div class="line"></div>
 
                 <h2>Unique Open Count</h2>
-                <a href="#">Count of who has opened your resume.</a>
+                <a href="https://www.google.com/">Count of who has opened your resume.</a>
 
                 <div class="line"></div>
 
                 <h2>Raw Open Count</h2>
-                <a href="#">Raw count of your resume - total, even duplicates (if they re-evaluated you)</a>
+                <a href="https://www.google.com/">Raw count of your resume - total, even duplicates (if they re-evaluated you)</a>
 
 
                 <!-- same as <hr>? -->
