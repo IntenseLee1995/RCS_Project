@@ -72,12 +72,9 @@
                             </button>
                         </div>
 
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Page 1</a></li>
-                                <li><a href="#">Page 2</a></li>
-                                <li><a href="#">Page 3</a></li>
-                                <li><a href="#">Page 4</a></li>
+                                <a href="#" class="btn btn-primary tw">Upload Resume</a>
                             </ul>
                         </div>
                     </div>
