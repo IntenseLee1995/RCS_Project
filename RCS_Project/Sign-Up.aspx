@@ -6,32 +6,33 @@
         <div class="row">
             <div class="col-md-6 sign-up"></div> 
             <div class="col-md-6">
-                <label for="email"><b>Email&nbsp;</b></label><input type="text" placeholder="Enter Email" name="email" required><br />
-                <label for="psw"><b>Password&nbsp;</b></label><input type="password" placeholder="Enter Password" name="psw" required><br />
-                <label for="psw-repeat"><b>Repeat Password&nbsp;</b></label><input type="password" placeholder="Repeat Password" name="psw-repeat" required><br />
+                <label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox><br />
+                <label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox><br />
+                <label for="psw-repeat"><b>Repeat Password&nbsp;</b></label><asp:TextBox ID="passwordRepeatTextBox" runat="server"></asp:TextBox><br />
+                <asp:CompareValidator ID="passwordCompareValidator" runat="server" ControlToCompare="passwordRepeatTextBox" ControlToValidate="passwordTextBox" ErrorMessage="Password need to match" Visible="False"></asp:CompareValidator>
                 <br />
                 <div>
-                    <select>
-                        <option value="0">Choose User Type:</option>
-                        <option value="student">Student</option>
-                        <option value="professional">Progessional</option>
-                    </select>
+                    <asp:DropDownList ID="userTypeDropDownList" runat="server">
+                        <asp:ListItem>Student</asp:ListItem>
+                        <asp:ListItem>Professional</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <br />
                 <div>
-                    <select>
-                        <option value="0">Shoose Industry Type:</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="computer-information-system">CIS</option>
-                        <option value="computer-science">Computer Science</option>
-                        <option value="finance">Finance</option>
-                    </select>
+                    <asp:DropDownList ID="userIndustryDropDownList" runat="server">
+                        <asp:ListItem>Fiance</asp:ListItem>
+                        <asp:ListItem>Marketing</asp:ListItem>
+                        <asp:ListItem>Computer Information System</asp:ListItem>
+                        <asp:ListItem>Compuer Science</asp:ListItem>
+                        <asp:ListItem>Accounting</asp:ListItem>
+                        <asp:ListItem>Art</asp:ListItem>
+                        <asp:ListItem>Science</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <p class="mar-10">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
                 <div class="row">
-                    <div class="col-md-6"><a class="btn btn-default wit-100" href="Login">Login</a></div>
-                    <div class="col-md-6"><a class="btn btn-primary wit-100 col-md-6" href="Sign-Up">Submit</a></div>
-                </div>
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                </div>              
             </div>
         </div>
     </div>
