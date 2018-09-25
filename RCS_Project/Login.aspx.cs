@@ -11,6 +11,17 @@ namespace RCS_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Globals.conn.Open();
+        }
+
+        protected void loginButton_Click(object sender, EventArgs e)
+        {
+            var userName = "";
+            var userPassword = "";
+
+            userName = emailTextBox.Text;
+            userPassword = passTextBox.Text;
+
 
         }
     }

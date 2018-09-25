@@ -23,40 +23,29 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <h3>Bootstrap Sidebar</h3>
+                    <h3>Student<br />Dashboard</h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Menu</p>
+                    <p>Welcome, [Stu Name]</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="#">Feedback</a></li>
-                            <li><a href="#">Account Settings</a></li>
-                            <li><a href="#">Profile Settings</a></li>
-                            <li><a href="#">History</a></li>
-                        </ul>
+                        <a href="#">Home</a>
+                   </li>
+                    <li>
+                        <a href="#">Submit Resume</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
-                        </ul>
+                        <a href="#">Feedback</a>
                     </li>
                     <li>
-                        <a href="#">PLACEHOLDER</a>
+                        <a href="#">Account Settings</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Profile Settings</a>
                     </li>
-                </ul>
-
-                <ul class="list-unstyled CTAs">
-                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
-                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                    <li>
+                        <a href="#">History</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -69,13 +58,13 @@
                         <div class="navbar-header">
                             <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
                                 <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Open Sidebar</span>
+                                <span>Menu</span>
                             </button>
                         </div>
 
                         <div>
                             <ul class="nav navbar-nav navbar-right">
-                                <a href="#" class="btn btn-primary tw">Upload Resume</a>
+                                <a href="#" class="btn btn-primary tw">Submit Resume</a>
                             </ul>
                         </div>
                     </div>
