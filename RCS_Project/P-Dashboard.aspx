@@ -43,6 +43,9 @@
                     <li>
                         <a href="#">Rating</a>
                     </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
                 </ul>
             </nav>
 
