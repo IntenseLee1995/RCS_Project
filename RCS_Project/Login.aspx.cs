@@ -22,7 +22,6 @@ namespace RCS_Project
             userName = emailTextBox.Text;
             userPassword = passTextBox.Text;
 
-
         }
     }
 }
