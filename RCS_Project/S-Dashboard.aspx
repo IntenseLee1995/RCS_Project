@@ -46,6 +46,9 @@
                     <li>
                         <a href="#">History</a>
                     </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
                 </ul>
             </nav>
 
