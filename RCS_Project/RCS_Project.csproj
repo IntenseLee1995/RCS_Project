@@ -133,6 +133,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\style3.css" />
     <Content Include="Content\syle.css" />
+    <Content Include="DB.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Feedback.aspx" />
@@ -194,6 +195,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DB.aspx.cs">
+      <DependentUpon>DB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DB.aspx.designer.cs">
+      <DependentUpon>DB.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
