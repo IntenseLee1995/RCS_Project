@@ -31,7 +31,7 @@
                 </div>
                 <p class="mar-10">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
                 <div class="row">
-                    <div class="col-md-6"><a href="Login" class="btn btn-primary wit-100">Login</a></div>
+                    <div class="col-md-6"><a href="Login" class="btn btn-default wit-100">Login</a></div>
                     <div class="col-md-6"><asp:Button ID="submitButton" runat="server" Text="Sign-Up" OnClick="submitButton_Click" CssClass="btn btn-primary wit-100" /></div>
                 </div>              
             </div>
