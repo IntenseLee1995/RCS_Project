@@ -184,6 +184,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Sign Out.aspx" />
     <Content Include="Sign-Up.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="S-Dashboard.aspx.designer.cs">
       <DependentUpon>S-Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign Out.aspx.cs">
+      <DependentUpon>Sign Out.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign Out.aspx.designer.cs">
+      <DependentUpon>Sign Out.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sign-Up.aspx.cs">
       <DependentUpon>Sign-Up.aspx</DependentUpon>
