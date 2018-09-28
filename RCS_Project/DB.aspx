@@ -47,7 +47,7 @@
                         <a href="#">History</a>
                     </li>
                     <li>
-                        <a href="HomePage.aspx">Sign Out</a>
+                        <a href="Default.aspx">Sign Out</a>
                     </li>
                 </ul>
             </nav>
