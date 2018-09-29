@@ -47,7 +47,7 @@
                         <a href="#">History</a>
                     </li>
                     <li>
-                        <a href="Default.aspx">Sign Out</a>
+                        <asp:hyperlink runat="server" Text="Sign Out" NavigateUrl="~/Default.aspx?UserStatus=Sign Out"></asp:hyperlink>
                     </li>
                 </ul>
             </nav>
