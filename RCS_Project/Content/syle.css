@@ -33,7 +33,7 @@ form {
         }
 
             form input:focus + label, form textarea:focus + label {
-                background: #357EBD;
+                background: #0000;
                 color: white;
                 font-size: 70%;
                 padding: 1px 6px;

@@ -10,7 +10,7 @@
 namespace RCS_Project {
     
     
-    public partial class S_Dashboard {
+    public partial class DB {
         
         /// <summary>
         /// userType control.

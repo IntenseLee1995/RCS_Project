@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Student Dashboard" Language="C#" AutoEventWireup="true" CodeBehind="S-Dashboard.aspx.cs" Inherits="RCS_Project.S_Dashboard" %>
+﻿<%@ Page title="Dashboard" Language="C#" AutoEventWireup="true" CodeBehind="DB.aspx.cs" Inherits="RCS_Project.DB" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Student Dashboard</title>
+        <title>Dashboard</title>
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
@@ -16,7 +16,7 @@
     <body>
 
         <div class="wrapper">
-            <!-- Sidebar Holder -->
+             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
@@ -29,13 +29,13 @@
                 <ul class="list-unstyled components">
                     <p>Welcome, <asp:Label ID="stuName" runat="server"></asp:Label></p>
                     <li class="active">
-                        <a href="Default.aspx">Home</a>
+                        <a href="#">Home</a>
                    </li>
                     <li>
                         <a href="#">Submit Resume</a>
                     </li>
                     <li>
-                        <a href="Feedback.aspx">Feedback</a>
+                        <a href="#">Feedback</a>
                     </li>
                     <li>
                         <a href="#">Account Settings</a>

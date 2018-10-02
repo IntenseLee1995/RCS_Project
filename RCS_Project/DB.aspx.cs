@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace RCS_Project
 {
-    public partial class P_Dashboard : System.Web.UI.Page
+    public partial class DB : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             userType.Text = "";
-            proName.Text = "";
+            stuName.Text = "";
             try
             {
                 if (Session["userName"].ToString() != null)
@@ -22,7 +22,7 @@ namespace RCS_Project
                     ConnectDatabase(query);
                 }
             }
-            catch (Exception)
+            catch(Exception)
             {
 
             }
@@ -38,9 +38,11 @@ namespace RCS_Project
             while (reader.Read())
             {
                 userType.Text = reader["userType"].ToString();
-                proName.Text = reader["userEmail"].ToString();
+                stuName.Text = reader["userEmail"].ToString();
             }
             reader.Close();
         }
+
+
     }
 }
