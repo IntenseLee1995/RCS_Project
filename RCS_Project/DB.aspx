@@ -16,7 +16,7 @@
     <body>
 
         <div class="wrapper">
-            <!-- Sidebar Holder -->
+             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>

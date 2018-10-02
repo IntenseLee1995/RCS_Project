@@ -23,11 +23,11 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <h3>Professional<br />Dashboard</h3>
+                    <h3><asp:Label runat="server" ID="userType"></asp:Label><br />Dashboard</h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Welcome, [Pro Name]</p>
+                    <p>Welcome, <asp:Label ID="proName" runat="server"></asp:Label></p>
                     <li class="active">
                         <a href="#">Home</a>
                     </li>
@@ -44,7 +44,7 @@
                         <a href="#">Rating</a>
                     </li>
                     <li>
-                        <a href="#">Sign Out</a>
+                        <asp:hyperlink runat="server" Text="Sign Out" NavigateUrl="~/Default.aspx?UserStatus=Sign Out"></asp:hyperlink>
                     </li>
                 </ul>
             </nav>

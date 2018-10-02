@@ -11,5 +11,23 @@ namespace RCS_Project {
     
     
     public partial class S_Dashboard {
+        
+        /// <summary>
+        /// userType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label userType;
+        
+        /// <summary>
+        /// stuName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label stuName;
     }
 }

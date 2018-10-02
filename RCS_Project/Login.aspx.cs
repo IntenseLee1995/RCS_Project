@@ -18,10 +18,32 @@ namespace RCS_Project
         {
             var userName = "";
             var userPassword = "";
-
+            string userType = "";
+            bool loggedIn = true;
             userName = emailTextBox.Text;
             userPassword = passTextBox.Text;
+            Session["loggedIn"] = loggedIn;
+            Session["username"] = userName;
+            
+            //connect to database
+            string query = $"SELECT * FROM user WHERE userEmail = '{userName}'";
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
 
+            while (reader.Read())
+            {
+                userType = reader["userType"].ToString();
+
+            }
+            reader.Close();
+            if (userType == "User")
+            {
+                Response.Redirect("S-Dashboard.aspx", true);
+            }
+            else
+            {
+                Response.Redirect("P-Dashboard.aspx", true);
+            }
         }
     }
 }
