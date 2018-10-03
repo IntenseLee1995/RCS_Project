@@ -11,7 +11,11 @@ namespace RCS_Project
     public static class Globals     // Global variables section
     {
 
-        public static string dbConnectionString = "server=den1.mysql2.gear.host;uid=rcsdatabase;pwd=Fj6K?t-PMy94;database=rcsdatabase;";
+        public static string dbConnectionString = "server=den1.mysql2.gear.host;" + 
+                                                  "uid=rcsdatabase;" +
+                                                  "pwd=Fj6K?t-PMy94;" +
+                                                  "database=rcsdatabase;" +
+                                                  "ssl mode=none;";     // Gear Host server does not support SSL so we must disable SSL to avoid errors. 
 
         public static MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(dbConnectionString);
     }
