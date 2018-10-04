@@ -4,8 +4,8 @@
     <img style="width:100%;height:auto;" src="http://rcs.gearhostpreview.com/Images/Login-Banner.jpg" alt="Login Image Banner" />
     <div class="row">
         <div class="col-md-12">
-            <br /><label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox><br />
-            <br /><label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passTextBox" runat="server"></asp:TextBox><br />
+            <br /><label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" TextMode="Email" runat="server"></asp:TextBox><br />
+            <br /><label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passTextBox" TextMode="Password" runat="server"></asp:TextBox><br />
             <br />
             <div class="row">
                 <div class="col-md-6"><a class="btn btn-default wit-100" href="Sign-Up">Sign-Up</a></div>

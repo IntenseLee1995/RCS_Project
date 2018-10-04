@@ -6,9 +6,12 @@
         <div class="row">
             <div class="col-md-6 sign-up"></div> 
             <div class="col-md-6">
-                <label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox><br />
-                <label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox><br />
-                <label for="psw-repeat"><b>Repeat Password&nbsp;</b></label><asp:TextBox ID="passwordRepeatTextBox" runat="server"></asp:TextBox><br />
+                <div class="text-center">
+                    <asp:Label ID="fillBox" runat="server" Text="Fill All The Boxes Above" Visible="False" Font-Italic="True" ForeColor="Red" Font-Size="2em"></asp:Label>
+                </div>
+                <label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" TextMode="Email" runat="server"></asp:TextBox><br />
+                <label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passwordTextBox" TextMode="Password" runat="server"></asp:TextBox><br />
+                <label for="psw-repeat"><b>Repeat Password&nbsp;</b></label><asp:TextBox ID="passwordRepeatTextBox" TextMode="Password" runat="server"></asp:TextBox><br />
                 <asp:CompareValidator ID="passwordCompareValidator" runat="server" ControlToCompare="passwordRepeatTextBox" ControlToValidate="passwordTextBox" ErrorMessage="Password need to match" Visible="True" Display="Dynamic"></asp:CompareValidator>
                 <br />
                 <div>

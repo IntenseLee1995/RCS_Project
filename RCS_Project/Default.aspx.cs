@@ -24,6 +24,18 @@ namespace RCS_Project
                 sb.Append("</script>");
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
             }
+            if (Request.QueryString["UserStatus"] == "Account Created")
+            {
+                string signOutMessage = "You have successfully created an account.";
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append("<script type = 'text/javascript'>");
+                sb.Append("window.onload=function(){");
+                sb.Append("alert('");
+                sb.Append(signOutMessage);
+                sb.Append("')};");
+                sb.Append("</script>");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+            }
         }
     }
 }

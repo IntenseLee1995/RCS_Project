@@ -29,18 +29,27 @@ namespace RCS_Project
             userType = userTypeDropDownList.SelectedItem.Text;
             userIndustry = userIndustryDropDownList.SelectedItem.Text;
 
-            if(userRepeatPassword != userPassword)
+            if (userName != "" && userPassword != "" && userRepeatPassword != "" && userType != "" && userIndustry != "")
             {
-                passwordCompareValidator.Visible = true;
+                if (userRepeatPassword != userPassword)
+                {
+                    passwordCompareValidator.Visible = true;
+                }
+                else
+                {
+                    string query = $"insert INTO user(userEmail,userPassword,userType,userRating,userIndustryType) VALUES('{userName}','{userPassword}','{userType}','{userNull}','{userIndustry}');";
+                    var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+                    cmd.ExecuteNonQuery();
+                    Response.Redirect("~/Default.aspx?UserStatus=Account Created", true);
+                    Globals.conn.Close();
+                }
             }
             else
             {
-                string query = $"insert INTO user(userEmail,userPassword,userType,userRating,userIndustryType) VALUES('{userName}','{userPassword}','{userType}','{userNull}','{userIndustry}');";
-                var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
-                cmd.ExecuteNonQuery();
-                Response.Redirect("Default.aspx",true);
-                Globals.conn.Close();
+                fillBox.Visible = true;
             }
+
+
         }
     }
 }

@@ -147,7 +147,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="AccCreationThankYouPage.aspx" />
     <None Include="Properties\PublishProfiles\rcs - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rcs - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -284,13 +283,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="AccCreationThankYouPage.aspx.cs">
-      <DependentUpon>AccCreationThankYouPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AccCreationThankYouPage.aspx.designer.cs">
-      <DependentUpon>AccCreationThankYouPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
