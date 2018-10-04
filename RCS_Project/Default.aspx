@@ -16,7 +16,7 @@
                 <h2 style="text-align:center; color: #FFFFFF;">System Features</h2>
                 <p>&nbsp;</p>
                 <p style="text-align:center; color: #FFFFFF;">
-                    <a class="btn btn-default" href="Feedback">Learn more &raquo;</a>
+                    <a class="btn btn-primary" href="Feedback">Learn more &raquo;</a>
                 </p>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <h2 style="text-align:center; color: #FFFFFF;">System Team</h2>
                 <p>&nbsp;</p>
                 <p style="text-align:center; color: #FFFFFF;">
-                    <a class="btn btn-default" href="Default">Learn more &raquo;</a>
+                    <a class="btn btn-primary" href="Default">Learn more &raquo;</a>
                 </p>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <h2 style="text-align:center; color: #FFFFFF;">System Mission</h2>
                 <p>&nbsp;</p>
                 <p style="text-align:center; color: #FFFFFF;">
-                    <a class="btn btn-default" href="Default">Learn more &raquo;</a>
+                    <a class="btn btn-primary" href="Default">Learn more &raquo;</a>
                 </p>
             </div>
         </div>

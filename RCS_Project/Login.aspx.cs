@@ -11,6 +11,7 @@ namespace RCS_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Globals.conn.Close();
             Globals.conn.Open();
         }
 
@@ -33,7 +34,6 @@ namespace RCS_Project
             while (reader.Read())
             {
                 userType = reader["userType"].ToString();
-
             }
             if (userType == "Student")
             {
