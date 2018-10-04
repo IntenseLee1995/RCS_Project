@@ -143,7 +143,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6"><a href="#" class="btn btn-default wit-100 tabLink" onclick="showTab(event,'m')">Cancel</a></div>
-                            <div class="col-md-6"><asp:Button ID="submitResume" runat="server" Text="Submit Resume" CssClass="btn btn-primary wit-100" /></div>
+                            <div class="col-md-6"><asp:Button ID="submitResume" runat="server" Text="Submit Resume" CssClass="btn btn-primary wit-100" OnClick="submitResume_Click" /></div>
                         </div>
                     </div>
                 </div>
