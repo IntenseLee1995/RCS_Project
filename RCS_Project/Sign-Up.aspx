@@ -9,7 +9,7 @@
                 <label for="email"><b>Email&nbsp;</b></label><asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox><br />
                 <label for="psw"><b>Password&nbsp;</b></label><asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox><br />
                 <label for="psw-repeat"><b>Repeat Password&nbsp;</b></label><asp:TextBox ID="passwordRepeatTextBox" runat="server"></asp:TextBox><br />
-                <asp:CompareValidator ID="passwordCompareValidator" runat="server" ControlToCompare="passwordRepeatTextBox" ControlToValidate="passwordTextBox" ErrorMessage="Password need to match" Visible="False"></asp:CompareValidator>
+                <asp:CompareValidator ID="passwordCompareValidator" runat="server" ControlToCompare="passwordRepeatTextBox" ControlToValidate="passwordTextBox" ErrorMessage="Password need to match" Visible="True" Display="Dynamic"></asp:CompareValidator>
                 <br />
                 <div>
                     <asp:DropDownList ID="userTypeDropDownList" runat="server">
