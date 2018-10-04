@@ -27,10 +27,5 @@ namespace RCS_Project
         {
             Globals.conn.Close();
         }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

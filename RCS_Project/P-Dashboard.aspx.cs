@@ -13,6 +13,7 @@ namespace RCS_Project
         {
             userType.Text = "";
             proName.Text = "";
+            welPUser.Text = "";
             try
             {
                 if (Session["userName"].ToString() != null)
@@ -38,6 +39,7 @@ namespace RCS_Project
             while (reader.Read())
             {
                 userType.Text = reader["userType"].ToString();
+                welPUser.Text = reader["userType"].ToString();
                 proName.Text = reader["userEmail"].ToString();
             }
             reader.Close();

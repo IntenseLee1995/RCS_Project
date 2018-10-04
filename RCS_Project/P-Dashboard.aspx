@@ -6,30 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Professional Dashboard</title>
-        <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
         <link rel="stylesheet" href="http://rcs.gearhostpreview.com/content/style3.css">
-        <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="http://rcs.gearhostpreview.com/content/Site.css">
+
     </head>
     <body>
-
         <div class="wrapper">
-            <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
                 </div>
-
                 <div class="sidebar-header">
                     <h3><asp:Label runat="server" ID="userType"></asp:Label><br />Dashboard</h3>
                 </div>
-
                 <ul class="list-unstyled components">
                     <p>Welcome, <asp:Label ID="proName" runat="server"></asp:Label></p>
                     <li class="active">
                         <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Give Feedback</a>
                     </li>
                     <li>
                         <a href="#">Current Feedback</a>
@@ -48,8 +46,6 @@
                     </li>
                 </ul>
             </nav>
-
-            <!-- Page Content Holder -->
             <div id="content">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -59,29 +55,43 @@
                                 <span>Menu</span>
                             </button>
                         </div>
-                        <div>
-                            <ul class="nav navbar-nav navbar-right">
-                                <a href="#" class="btn btn-primary tw">Give Feedback</a>
-                            </ul>
+                        <div class="nav navbar-nav navbar-right">
+                                <a href="#" class="btn btn-info navbar-btn">Give Feedback</a>
                         </div>
                     </div>
                 </nav>
-
-                <h2>Professional Dashboard</h2>
-
-                <div class="line"></div>
-
-                <h2>Favorited Resumes</h2>
-                <a href="#">Link</a>
-                <div class="line"></div>
-
-                <h2>Leads</h2>
-                <a href="#">link</a>
-                <div class="line"></div>
-
-                <h3>Review</h3>
-                <a href="#">link</a>            
-
+                <div class="jumbotron bg-img">
+                    <h1 style="text-align:center; color: #FFFFFF;">WELCOME <asp:Label runat="server" ID="welPUser" CssClass="text-uppercase"></asp:Label><br />TO YOUR RESUME<br />BUILDER SYSTEM</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sys-mission">
+                            <h2 style="text-align:center; color: #FFFFFF;">Give Feedback</h2>
+                            <p>&nbsp;</p>
+                            <p style="text-align:center; color: #FFFFFF;">
+                                <a class="btn btn-default" href="#">CLICK HERE &raquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="sys-team">
+                            <h2 style="text-align:center; color: #FFFFFF;">Current Feedback</h2>
+                            <p>&nbsp;</p>
+                            <p style="text-align:center; color: #FFFFFF;">
+                                <a class="btn btn-default" href="#">CLICK HERE &raquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="sys-features">
+                            <h2 style="text-align:center; color: #FFFFFF;">Rating Feature</h2>
+                            <p>&nbsp;</p>
+                            <p style="text-align:center; color: #FFFFFF;">
+                                <a class="btn btn-default" href="#">Coming Soon &raquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

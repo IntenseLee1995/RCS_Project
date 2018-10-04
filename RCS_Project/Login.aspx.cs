@@ -35,14 +35,15 @@ namespace RCS_Project
                 userType = reader["userType"].ToString();
 
             }
-            reader.Close();
-            if (userType == "User")
+            if (userType == "Student")
             {
                 Response.Redirect("S-Dashboard.aspx", true);
+                reader.Close();
             }
-            else
+            else if (userType == "Professional")
             {
                 Response.Redirect("P-Dashboard.aspx", true);
+                reader.Close();
             }
         }
     }
