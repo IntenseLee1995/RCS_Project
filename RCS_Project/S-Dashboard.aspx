@@ -146,11 +146,81 @@
                             <div class="col-md-6"><asp:Button ID="submitResume" runat="server" Text="Submit Resume" CssClass="btn btn-primary wit-100" OnClick="submitResume_Click" /></div>
                         </div>
                     </div>
-                </div>
+                </div>        
 
                 <div id="sf" class="d-none tabContent">
                     <div class="jumbotron bg-img">
-                        <h1 style="text-align:center; color: #FFFFFF;">COMING SOON<br />TO YOUR RESUME<br />BUILDER SYSTEM</h1>
+                        <h1 style="text-align:center; color: #FFFFFF;">SEE FEEDBACK<%--<br />TO YOUR RESUME<br />BUILDER SYSTEM--%></h1>
+                    </div>
+                      <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4>Education:</h4>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="EducationCurrent"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="EducationFeedback"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:TextBox ID="NewEducation" runat="server"></asp:TextBox>
+                                <p><em>Input your most current or most recently completed education</em></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4>Experience:</h4>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="ExperienceCurrent"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="ExperienceFeedback"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:TextBox ID="NewExperience" runat="server"></asp:TextBox>
+                                <p><em>Input any work experience or internship experience</em></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4>Skills:</h4>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="SkillsCurrent"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="SkillsFeedback"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:TextBox ID="NewSkills" runat="server"></asp:TextBox>
+                                <p><em>Input any hard skills(programming, Microsoft Office, etc.) and any soft skills(communication, team work, etc.)</em></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4>Projects:</h4>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="ProjectsCurrent"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Label runat="server" ID="ProjectsFeedback"></asp:Label>
+                            </div>
+                            <div class="col-md-3">
+                                <asp:TextBox ID="NewProjects" runat="server"></asp:TextBox>
+                                <p><em>Input any class or work projects that you have worked on</em></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><a href="#" class="btn btn-default wit-100 tabLink" onclick="showTab(event,'m')">Cancel</a></div>
+                            <div class="col-md-6"><asp:Button ID="editResume" runat="server" Text="Submit Resume" CssClass="btn btn-primary wit-100" OnClick="editResume_Click" /></div>
+                        </div>
                     </div>
                 </div>
 
