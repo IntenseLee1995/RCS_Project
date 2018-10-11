@@ -117,21 +117,38 @@ namespace RCS_Project
             Globals.conn.Open();
             if(NewEducation.Text != "")
             {
-                UpdateResumeInputTable("userEducation", NewEducation.Text);                           
+                UpdateResumeInputTable("userEducation", NewEducation.Text);  
+                if(NewExperience.Text != "")
+                {
+                    UpdateResumeInputTable("userExperience", NewExperience.Text);
+                    if(NewSkills.Text != "")
+                    {
+                        UpdateResumeInputTable("userSkills", NewSkills.Text);
+                        if(NewProjects.Text != "")
+                        {
+                            UpdateResumeInputTable("userProjects", NewProjects.Text);
+                        }
+                    }
+
+                }
             }
-            else if(NewExperience.Text != "")
-            {
-                UpdateResumeInputTable("userExperience", NewExperience.Text);
-            }
-            else if(NewSkills.Text != "")
-            {
-                UpdateResumeInputTable("userSkills", NewSkills.Text);
-            }
-            else if(NewProjects.Text != "")
-            {
-                UpdateResumeInputTable("userProjects", NewProjects.Text);
-            }
+            //else if (NewExperience.Text != "")
+            //{
+            //    UpdateResumeInputTable("userExperience", NewExperience.Text);
+            //}
+            //else if (NewSkills.Text != "")
+            //{
+            //    UpdateResumeInputTable("userSkills", NewSkills.Text);
+            //}
+            //else if (NewProjects.Text != "")
+            //{
+            //    UpdateResumeInputTable("userProjects", NewProjects.Text);
+            //}
             Globals.conn.Close();
+            Response.Redirect("S-Dashboard.aspx");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "seeFeedback", "showTab(event,'sf')", true);
+
+
         }
 
         protected void UpdateResumeInputTable(string columnName, string value)
@@ -139,7 +156,7 @@ namespace RCS_Project
             string query = $"UPDATE rcsdatabase.resumeinput set {columnName} = '{value}' where userID = {userID};";
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             cmd.ExecuteNonQuery();
-            Response.Redirect("S-Dashboard.aspx", true);
+
         }
     }
 }
