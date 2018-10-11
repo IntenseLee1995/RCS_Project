@@ -33,6 +33,32 @@ namespace RCS_Project
 
             PullResumeInfo();
             DisplayFeedback();
+
+            if (Request.QueryString["UserStatus"] == "Account Updated")
+            {
+                Globals.conn.Close();
+                string signOutMessage = "You have successfully updated your resume.";
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append("<script type = 'text/javascript'>");
+                sb.Append("window.onload=function(){");
+                sb.Append("alert('");
+                sb.Append(signOutMessage);
+                sb.Append("')};");
+                sb.Append("</script>");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+            }
+            if (Request.QueryString["UserStatus"] == "Account Not Updated")
+            {
+                string signOutMessage = "You have not successfully updated your resume.";
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append("<script type = 'text/javascript'>");
+                sb.Append("window.onload=function(){");
+                sb.Append("alert('");
+                sb.Append(signOutMessage);
+                sb.Append("')};");
+                sb.Append("</script>");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+            }
         }
 
         public void ConnectDatabase(string query)
@@ -57,7 +83,6 @@ namespace RCS_Project
             try
             {
                 Globals.conn.Open();
-                //read the info in textboxes and input into the resume input table
                 string query = $"INSERT INTO resumeinput (userID, userEducation, userExperience, userSkills, userProjects) " +
                     $"VALUES('{userID}', '{eduTextBox.Text}', '{expTextBox.Text}', '{skiTextBox.Text}','{proTextBox.Text}')";
                 var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
@@ -80,7 +105,7 @@ namespace RCS_Project
 
         protected void PullResumeInfo()
         {
-            string query = "select * from resumeinput";
+            string query = $"SELECT * from resumeinput WHERE userID = '{userID}';";
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -95,18 +120,15 @@ namespace RCS_Project
 
         protected void DisplayFeedback()
         {
-            string query = "select * from feedbackinput";
+            string query = $"SELECT * from feedbackinput WHERE fKey = '{userID}';";
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                if (userID == Convert.ToInt32(reader["userID"]))
-                {
-                    EducationFeedback.Text = reader["educationComments"].ToString();
-                    ExperienceFeedback.Text = reader["experienceComments"].ToString();
-                    SkillsFeedback.Text = reader["skillsComments"].ToString();
-                    ProjectsFeedback.Text = reader["projectsComments"].ToString();
-                }
+                EducationFeedback.Text = reader["educationComments"].ToString();
+                ExperienceFeedback.Text = reader["experienceComments"].ToString();
+                SkillsFeedback.Text = reader["skillsComments"].ToString();
+                ProjectsFeedback.Text = reader["projectsComments"].ToString();
             }
             reader.Close();
             Globals.conn.Close();
@@ -115,31 +137,33 @@ namespace RCS_Project
         protected void editResume_Click(object sender, EventArgs e)
         {            
             Globals.conn.Open();
-            if(NewEducation.Text != "")
+            if(NewEducation.Text != "" && NewExperience.Text != "" && NewSkills.Text != "" && NewProjects.Text != "")
             {
-                UpdateResumeInputTable("userEducation", NewEducation.Text);                           
+                UpdateResumeInputTable(NewEducation.Text, NewExperience.Text, NewSkills.Text, NewProjects.Text);
+                UpdateFeedbackInputTable();
+                PullResumeInfo();
+                DisplayFeedback();
+                Response.Redirect("~/S-Dashboard?UserStatus=Account Updated", true);
             }
-            else if(NewExperience.Text != "")
+            else
             {
-                UpdateResumeInputTable("userExperience", NewExperience.Text);
+                PullResumeInfo();
+                DisplayFeedback();
+                Response.Redirect("~/S-Dashboard?UserStatus=Account Not Updated", true);
             }
-            else if(NewSkills.Text != "")
-            {
-                UpdateResumeInputTable("userSkills", NewSkills.Text);
-            }
-            else if(NewProjects.Text != "")
-            {
-                UpdateResumeInputTable("userProjects", NewProjects.Text);
-            }
-            Globals.conn.Close();
         }
 
-        protected void UpdateResumeInputTable(string columnName, string value)
+        protected void UpdateResumeInputTable(string value1, string value2, string value3, string value4)
         {
-            string query = $"UPDATE rcsdatabase.resumeinput set {columnName} = '{value}' where userID = {userID};";
-            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
-            cmd.ExecuteNonQuery();
-            Response.Redirect("S-Dashboard.aspx", true);
+            string query1 = $"UPDATE rcsdatabase.resumeinput SET userEducation = '{value1}', userExperience = '{value2}', userSkills = '{value3}', userProjects = '{value4}'  where userID = '{userID}';";
+            var cmd1 = new MySql.Data.MySqlClient.MySqlCommand(query1, Globals.conn);
+            cmd1.ExecuteNonQuery();
+        }
+        protected void UpdateFeedbackInputTable()
+        {
+            string query1 = $"UPDATE rcsdatabase.feedbackinput SET educationComments ='Pro Needs To Give New Feedback', experienceComments='Pro Needs To Give New Feedback', skillsComments='Pro Needs To Give New Feedback', projectssComments='Pro Needs To Give New Feedback' WHERE fKey='{userID}';";
+            var cmd1 = new MySql.Data.MySqlClient.MySqlCommand(query1, Globals.conn);
+            cmd1.ExecuteNonQuery();
         }
     }
 }

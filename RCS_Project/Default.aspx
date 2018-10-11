@@ -20,7 +20,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-4 ">
+        <div class="col-md-4">
             <div class="sys-team">
                 <h2 style="text-align:center; color: #FFFFFF;">System Team</h2>
                 <p>&nbsp;</p>
@@ -29,7 +29,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-4 ">
+        <div class="col-md-4">
             <div class="sys-mission">
                 <h2 style="text-align:center; color: #FFFFFF;">System Mission</h2>
                 <p>&nbsp;</p>
