@@ -40,13 +40,13 @@ namespace RCS_Project {
         protected global::System.Web.UI.WebControls.Label welPUser;
         
         /// <summary>
-        /// eduTextBox control.
+        /// eduLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eduTextBox;
+        protected global::System.Web.UI.WebControls.Label eduLabel;
         
         /// <summary>
         /// fbEduTextBox control.
@@ -58,31 +58,13 @@ namespace RCS_Project {
         protected global::System.Web.UI.WebControls.TextBox fbEduTextBox;
         
         /// <summary>
-        /// Button1 control.
+        /// expLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-        
-        /// <summary>
-        /// expTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox expTextBox;
+        protected global::System.Web.UI.WebControls.Label expLabel;
         
         /// <summary>
         /// fbExpTextbox control.
@@ -94,31 +76,13 @@ namespace RCS_Project {
         protected global::System.Web.UI.WebControls.TextBox fbExpTextbox;
         
         /// <summary>
-        /// Button3 control.
+        /// skiLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-        
-        /// <summary>
-        /// Button4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
-        
-        /// <summary>
-        /// skiTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox skiTextBox;
+        protected global::System.Web.UI.WebControls.Label skiLabel;
         
         /// <summary>
         /// fbSkiTextBox control.
@@ -130,31 +94,13 @@ namespace RCS_Project {
         protected global::System.Web.UI.WebControls.TextBox fbSkiTextBox;
         
         /// <summary>
-        /// Button5 control.
+        /// proLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
-        
-        /// <summary>
-        /// Button6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
-        
-        /// <summary>
-        /// proTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proTextBox;
+        protected global::System.Web.UI.WebControls.Label proLabel;
         
         /// <summary>
         /// fbProTextBox control.
@@ -166,30 +112,12 @@ namespace RCS_Project {
         protected global::System.Web.UI.WebControls.TextBox fbProTextBox;
         
         /// <summary>
-        /// Button7 control.
+        /// submitFeedback control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
-        
-        /// <summary>
-        /// Button8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
-        
-        /// <summary>
-        /// giveFeedback control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button giveFeedback;
+        protected global::System.Web.UI.WebControls.Button submitFeedback;
     }
 }

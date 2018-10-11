@@ -13,7 +13,6 @@ namespace RCS_Project
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             userType.Text = "";
             stuName.Text = "";
             welSUser.Text = "";
@@ -59,6 +58,18 @@ namespace RCS_Project
                 sb.Append("</script>");
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
             }
+            if (Request.QueryString["UserStatus"] == "Resume Submitted")
+            {
+                string signOutMessage = "You have successfully submitted your resume.";
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append("<script type = 'text/javascript'>");
+                sb.Append("window.onload=function(){");
+                sb.Append("alert('");
+                sb.Append(signOutMessage);
+                sb.Append("')};");
+                sb.Append("</script>");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+            }
         }
 
         public void ConnectDatabase(string query)
@@ -75,7 +86,6 @@ namespace RCS_Project
                 userID = Convert.ToInt32(reader["userID"]);
             }
             reader.Close();
-
         }
 
         protected void submitResume_Click(object sender, EventArgs e)
@@ -83,7 +93,7 @@ namespace RCS_Project
             try
             {
                 Globals.conn.Open();
-                string query = $"INSERT INTO resumeinput (userID, userEducation, userExperience, userSkills, userProjects) " +
+                string query = $"INSERT INTO rcsdatabase.resumeinput (userID, userEducation, userExperience, userSkills, userProjects) " +
                     $"VALUES('{userID}', '{eduTextBox.Text}', '{expTextBox.Text}', '{skiTextBox.Text}','{proTextBox.Text}')";
                 var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
                 cmd.ExecuteNonQuery();
@@ -99,7 +109,7 @@ namespace RCS_Project
                 skiTextBox.Text = "";
                 proTextBox.Text = "";
                 Globals.conn.Close();
-                Response.Redirect("S-Dashboard.aspx", true);
+                Response.Redirect("~/S-Dashboard?UserStatus=Resume Submitted", true);
             }
         }
 

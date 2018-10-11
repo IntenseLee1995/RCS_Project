@@ -97,69 +97,72 @@
                 </div>
 
                 <div id="gf" class="d-none tabContent">
-                    <div class="jumbotron sign-up">
+                    <div class="jumbotron bg-img">
                         <h1 style="text-align:center; color: #FFFFFF;">GIVE FEEDBACK</h1>
                     </div>
                     <div class="container">
                         <div class="row">
+                            <div class="col-md-2">
+                                <h4>Subject</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Student's Input</h4>
+                            </div>
                             <div class="col-md-6">
+                                <h4>Feedback Given</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
                                 <h4>Education:</h4>
-                                <asp:TextBox ID="eduTextBox" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label ID="eduLabel" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="col-md-6">
                                 <asp:TextBox ID="fbEduTextBox" runat="server"></asp:TextBox>
-                                <div class="row">
-                                    <div class="col-md-6"><asp:Button ID="Button1" runat="server" Text="Dislike" CssClass="btn btn-default wit-100" /></div>
-                                    <div class="col-md-6"><asp:Button ID="Button2" runat="server" Text="Like" CssClass="btn btn-primary wit-100" /></div>
-                                </div>
                             </div>
                         </div>
                         <p>&nbsp;</p>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-2">
                                 <h4>Experience:</h4>
-                                <asp:TextBox ID="expTextBox" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label ID="expLabel" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="col-md-6">
                                 <asp:TextBox ID="fbExpTextbox" runat="server"></asp:TextBox>
-                                <div class="row">
-                                    <div class="col-md-6"><asp:Button ID="Button3" runat="server" Text="Dislike" CssClass="btn btn-default wit-100" /></div>
-                                    <div class="col-md-6"><asp:Button ID="Button4" runat="server" Text="Like" CssClass="btn btn-primary wit-100" /></div>
-                                </div>
                             </div>
                         </div>
                         <p>&nbsp;</p>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-2">
                                 <h4>Skills:</h4>
-                                <asp:TextBox ID="skiTextBox" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label ID="skiLabel" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="col-md-6">
                                 <asp:TextBox ID="fbSkiTextBox" runat="server"></asp:TextBox>
-                                <div class="row">
-                                    <div class="col-md-6"><asp:Button ID="Button5" runat="server" Text="Dislike" CssClass="btn btn-default wit-100" /></div>
-                                    <div class="col-md-6"><asp:Button ID="Button6" runat="server" Text="Like" CssClass="btn btn-primary wit-100" /></div>
-                                </div>
                             </div>
                         </div>
                         <p>&nbsp;</p>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-2">
                                 <h4>Projects:</h4>
-                                <asp:TextBox ID="proTextBox" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label ID="proLabel" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="col-md-6">
                                 <asp:TextBox ID="fbProTextBox" runat="server"></asp:TextBox>
-                                <div class="row">
-                                    <div class="col-md-6"><asp:Button ID="Button7" runat="server" Text="Dislike" CssClass="btn btn-default wit-100" /></div>
-                                    <div class="col-md-6"><asp:Button ID="Button8" runat="server" Text="Like" CssClass="btn btn-primary wit-100" /></div>
-                                </div>
                             </div>
                         </div>
                         <p>&nbsp;</p>
                         <div class="row">
                             <div class="col-md-6"><a href="#" class="btn btn-default wit-100 tabLink" onclick="showTab(event,'m')">Cancel</a></div>
-                            <div class="col-md-6"><asp:Button ID="giveFeedback" runat="server" Text="Give Feedback" CssClass="btn btn-primary wit-100" /></div>
+                            <div class="col-md-6"><asp:Button ID="submitFeedback" runat="server" Text="Give Feedback" CssClass="btn btn-primary wit-100" OnClick="submitFeedback_Click" /></div>
                         </div>
                     </div>
                 </div>
