@@ -130,7 +130,7 @@ namespace RCS_Project
 
         protected void DisplayFeedback()
         {
-            string query = $"SELECT * from feedbackinput WHERE fKey = '{userID}';";
+            string query = $"SELECT * from feedbackinput WHERE userID = {userID};";
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -138,9 +138,25 @@ namespace RCS_Project
                 EducationFeedback.Text = reader["educationComments"].ToString();
                 ExperienceFeedback.Text = reader["experienceComments"].ToString();
                 SkillsFeedback.Text = reader["skillsComments"].ToString();
-                ProjectsFeedback.Text = reader["projectsComments"].ToString();
+                ProjectsFeedback.Text = reader["projectsComments"].ToString();                
             }
             reader.Close();
+            if (EducationFeedback.Text == "")
+            {
+                EducationFeedback.Text = "Pro Needs To Give Feedback";
+            }
+            if (ExperienceFeedback.Text == "")
+            {
+                ExperienceFeedback.Text = "Pro Needs To Give Feedback";
+            }
+            if (SkillsFeedback.Text == "")
+            {
+                SkillsFeedback.Text = "Pro Needs To Give Feedback";
+            }
+            if (ProjectsFeedback.Text == "")
+            {
+                ProjectsFeedback.Text = "Pro Needs To Give Feedback";
+            }
             Globals.conn.Close();
         }
 
@@ -171,7 +187,7 @@ namespace RCS_Project
         }
         protected void UpdateFeedbackInputTable()
         {
-            string query1 = $"UPDATE rcsdatabase.feedbackinput SET educationComments ='Pro Needs To Give New Feedback', experienceComments='Pro Needs To Give New Feedback', skillsComments='Pro Needs To Give New Feedback', projectssComments='Pro Needs To Give New Feedback' WHERE fKey='{userID}';";
+            string query1 = $"UPDATE rcsdatabase.feedbackinput SET educationComments ='Pro Needs To Give New Feedback', experienceComments='Pro Needs To Give New Feedback', skillsComments='Pro Needs To Give New Feedback', projectsComments='Pro Needs To Give New Feedback' WHERE userID={userID};";
             var cmd1 = new MySql.Data.MySqlClient.MySqlCommand(query1, Globals.conn);
             cmd1.ExecuteNonQuery();
         }
